@@ -10,13 +10,14 @@
 
     var promise = new Promise(function(resolve, reject) {
       var wrappedUpdate = function(data) {
+        var originalData = JSON.parse(JSON.stringify(data));
         aborted = false;
         try {
           if (++tries > 100) throw new Error('maxretry');
           var result = updateFunction.call(this, data);
           if (result === undefined) {
             aborted = true;
-            result = data;
+            result = originalData;
           } else if (result === Firebase.ABORT_TRANSACTION_NOW) {
             aborted = true;
             result = undefined;
