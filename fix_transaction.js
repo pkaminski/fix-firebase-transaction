@@ -10,6 +10,7 @@
 
     var promise = new Promise(function(resolve, reject) {
       var wrappedUpdate = function(data) {
+        // Clone data in case updateFunction modifies it before aborting.
         var originalData = JSON.parse(JSON.stringify(data));
         aborted = false;
         try {
@@ -28,7 +29,6 @@
           // catch them here instead, reject the promise, and abort the transaction by returning
           // undefined.
           updateError = e;
-          reject(e);
         }
       };
 
