@@ -1,0 +1,25 @@
+{
+  "name": "fix-firebase-transaction",
+  "version": "0.1.0",
+  "description": "Monkeypatch some broken semantics of Firebase transactions",
+  "scripts": {
+    "setup": "rm -rf bower_components; rm -rf node_modules; npm install; bower install;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pkaminski/fix-firebase-transaction.git"
+  },
+  "keywords": [
+    "firebase"
+  ],
+  "author": "Piotr Kaminski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pkaminski/fix-firebase-transaction/issues"
+  },
+  "homepage": "https://github.com/pkaminski/fix-firebase-transaction",
+  "main": "fix_transaction.js",
+  "dependencies": {
+    "firebase": "^2.4.2"
+  }
+}
