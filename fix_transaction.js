@@ -37,7 +37,7 @@
           originalTransaction.call(ref, wrappedUpdate, function(error, committed, snapshot) {
             error = error || updateError;
             var result;
-            if (error && error.message === 'set') {
+            if (error && (error.message === 'set' || error.message === 'disconnect')) {
               txn();
             } else if (error) {
               result = onComplete(error, false, snapshot);

@@ -16,6 +16,7 @@
   "unused": "vars",
   "globals": {
     "Firebase": false,
+    "Promise": false,
 
     "describe": false,
     "beforeEach": false,
