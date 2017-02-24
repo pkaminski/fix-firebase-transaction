@@ -1,5 +1,7 @@
 # fix-firebase-transaction
 
+[![Project Status: Inactive - The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](http://www.repostatus.org/badges/latest/inactive.svg)](http://www.repostatus.org/#inactive)
+
 Monkeypatch some broken semantics of Firebase transactions:
 
 1. Transactions will no longer get aborted by a stray `set` or `update` that happens to overlap them.
